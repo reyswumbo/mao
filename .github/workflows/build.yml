@@ -11,7 +11,7 @@ jobs:
   build:
     name: Build & Test
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repository
@@ -37,21 +37,21 @@ jobs:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          key: ${{ runner.os }}-gradle-v2-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', '**/*.kt') }}
           restore-keys: |
-            ${{ runner.os }}-gradle-
+            ${{ runner.os }}-gradle-v2-
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleDebug --no-daemon
 
       - name: Run Unit Tests
-        run: ./gradlew testDebugUnitTest
+        run: ./gradlew testDebugUnitTest --no-daemon
 
       - name: Run Lint
-        run: ./gradlew lintDebug
+        run: ./gradlew lintDebug --no-daemon
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
@@ -71,7 +71,7 @@ jobs:
   build-release:
     name: Build Release AAB
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
@@ -99,15 +99,15 @@ jobs:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          key: ${{ runner.os }}-gradle-v2-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', '**/*.kt') }}
           restore-keys: |
-            ${{ runner.os }}-gradle-
+            ${{ runner.os }}-gradle-v2-
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
       - name: Build Release AAB
-        run: ./gradlew bundleRelease
+        run: ./gradlew bundleRelease --no-daemon
 
       - name: Upload Release AAB
         uses: actions/upload-artifact@v4
