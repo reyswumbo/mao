@@ -9,9 +9,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
-class SystemUiController(private val view: View) {
-    private val window: Window = (LocalContext.current as Activity).window
-
+class SystemUiController(
+    private val view: View,
+    private val window: Window
+) {
     fun setStatusBarColor(colorInt: Int, darkIcons: Boolean) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         
@@ -42,7 +43,9 @@ class SystemUiController(private val view: View) {
     }
 }
 
+@Composable
 fun rememberSystemUiController(): SystemUiController {
     val view = LocalView.current
-    return SystemUiController(view)
+    val window = (LocalContext.current as Activity).window
+    return SystemUiController(view, window)
 }

@@ -4,10 +4,13 @@ import android.content.Context
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.datastore.preferences.PreferencesDataStore
+import androidx.datastore.preferences.core.MutablePreferences
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.PreferencesKeys
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
+import androidx.datastore.preferences.rx.preferenceDataStoreFactory
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.maomao.data.source.local.MaoMaoDatabase
@@ -19,7 +22,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
-    private val dataStore: PreferencesDataStore,
+    private val dataStore: androidx.datastore.preferences.PreferencesDataStore,
     private val database: MaoMaoDatabase,
     private val clearHistoryUseCase: ClearHistoryUseCase
 ) : ViewModel() {
