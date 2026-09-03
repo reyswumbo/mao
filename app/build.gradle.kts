@@ -92,7 +92,6 @@ dependencies {
     // Coil for image loading
     val coilVersion = "2.5.0"
     implementation("io.coil-kt:coil-compose:$coilVersion")
-    implementation("io.coil-kt:coil-network-okhttp:$coilVersion")
 
     // OkHttp & Retrofit for networking
     val okhttpVersion = "4.12.0"
