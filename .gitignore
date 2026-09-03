@@ -1,0 +1,53 @@
+# Gradle
+.gradle/
+build/
+*/build/
+*/build.gradle.kts.d/
+
+# Local configuration
+local.properties
+*.keystore
+keystore.properties
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Kotlin
+*.kt.html
+
+# Generated
+generated/
+generated-rn-src/
+
+# Debug
+app/debug/
+app/release/
+
+# APK/AAB
+*.apk
+*.aab
+
+# Coverage
+coverage/
+.ec
+
+# Captures
+captures/
+*.hprof
+
+# External
+.externalNativeBuild/
+
+# KSP
+*.kotlin_module

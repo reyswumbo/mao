@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Reader Background Colors for Dark Mode -->
+    <color name="reader_bg_white">#1C1B1F</color>
+    <color name="reader_bg_black">#000000</color>
+    <color name="reader_bg_gray">#1A1A1A</color>
+    <color name="reader_bg_sepia">#2D241A</color>
+    <color name="reader_bg_dark_sepia">#2D241A</color>
+
+    <color name="comic_cover_placeholder">#3D3D3D</color>
+    <color name="divider_color">#3D3D3D</color>
+    <color name="divider_color_dark">#3D3D3D</color>
+</resources>

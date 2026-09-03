@@ -1,0 +1,661 @@
+🚀 MAOMAO ANDROID APP CHALLENGE
+
+Build MaoMao — A Modern Native Android Comic Reader. $1,000 Reward. 💰
+
+We’re challenging developers, beginners, and AI-assisted builders to create MaoMao, a modern, lightweight, and native Android application for reading comics.
+
+You do not need a professional developer background to participate.
+
+You can learn, experiment, and use AI throughout the development process.
+
+---
+
+🌐 CONTENT SOURCE
+
+For the initial challenge version, MaoMao will integrate the following website:
+
+Base Source
+
+🌐 https://bacakomik.my/
+
+The application may use APIs, publicly accessible endpoints, or web scraping where technically appropriate.
+
+The source integration should retrieve only the content and data required to provide the comic-reading experience.
+
+---
+
+📱 ONE APP — EXPANDABLE SOURCES
+
+MaoMao currently supports one content source:
+
+MaoMao
+│
+└── BacaKomik
+    └── https://bacakomik.my/
+
+However, the application must be designed with an architecture that allows additional sources to be added in the future.
+
+The application should therefore use a source-independent architecture where possible.
+
+For example:
+
+Source Layer
+│
+├── BacaKomik
+│   └── bacakomik.my integration
+│
+├── Future Source
+│   └── Future integration
+│
+└── Future Source
+    └── Future integration
+
+Do not hard-code the entire application around a single implementation in a way that makes future sources difficult to add.
+
+---
+
+☰ HAMBURGER MENU / NAVIGATION DRAWER
+
+MaoMao must provide a hamburger menu / Navigation Drawer.
+
+For the initial version, the menu should contain:
+
+☰ MaoMao
+
+├── BacaKomik
+├── Riwayat
+├── Favorit
+└── Pengaturan
+
+The exact navigation structure may be improved by participants as long as the application remains intuitive and follows the overall challenge requirements.
+
+The hamburger menu should be designed so that additional comic sources can be added later without requiring a complete redesign of the application.
+
+---
+
+🔄 SOURCE FAILURE HANDLING
+
+The application must handle network and source failures gracefully.
+
+If "bacakomik.my" becomes unavailable, returns an error, times out, or cannot be reached, the application must:
+
+- Avoid crashing.
+- Display an appropriate Bahasa Indonesia error message.
+- Provide a retry option.
+- Preserve locally stored user data.
+- Keep navigation and other local features functional where possible.
+
+For example:
+
+«Tidak dapat memuat data»
+
+«Periksa koneksi internet Anda dan coba lagi.»
+
+«Coba Lagi»
+
+A source/network failure must not cause the entire application to become unusable.
+
+---
+
+🎨 MODERN NATIVE UI/UX
+
+This is NOT a website-wrapping challenge.
+
+MaoMao must have its own modern, native Android UI/UX specifically designed for mobile comic reading.
+
+Required:
+
+- Kotlin / Native Android
+- Jetpack Compose
+- Material 3
+- Modern Android navigation
+- Responsive mobile layout
+- Smooth interactions and transitions
+- Proper loading states
+- Proper error states
+- Proper empty states
+- Clean typography
+- Consistent spacing
+- Dark mode support
+- Accessibility considerations
+- Fast and responsive experience
+- Bahasa Indonesia throughout the application
+
+The final result should feel like a real Android application.
+
+It should not feel like a website opened inside an APK.
+
+---
+
+🚫 DO NOT COPY THE WEBSITE
+
+The application UI/UX must not simply replicate the existing BacaKomik website.
+
+Participants are expected to redesign the experience specifically for Android.
+
+You may take inspiration from the source's visual identity, artwork, colors, and general character.
+
+However, the MaoMao interface must be:
+
+- Original
+- Modern
+- Mobile-first
+- Easy to navigate
+- Optimized for comic reading
+
+Do not simply copy:
+
+- Website layouts
+- Website navigation
+- Website components
+- Desktop-oriented designs
+- Website typography
+- Website UI structure
+
+The goal is to transform the available content into a native Android experience.
+
+---
+
+🎨 MAOMAO DESIGN SYSTEM
+
+MaoMao should have a cohesive visual identity.
+
+Participants may create their own color palette and visual language.
+
+The design should prioritize:
+
+- Readability
+- Visual hierarchy
+- Comfortable reading
+- Consistency
+- Accessibility
+- Modern Material 3 principles
+- Smooth animations
+- Minimal visual clutter
+
+The interface should feel polished without being unnecessarily complicated.
+
+---
+
+📖 COMIC READER
+
+Reading comics is the core experience of MaoMao.
+
+The reader should be optimized specifically for mobile devices.
+
+Recommended features:
+
+- Vertical scrolling reader
+- Smooth image loading
+- Chapter navigation
+- Previous / Next chapter
+- Reading progress
+- Continue reading
+- Bookmark / Favorite
+- Reading history
+- Image loading states
+- Failed image handling
+- Fullscreen reading mode
+- Immersive reading experience
+- Easy return/navigation controls
+- Dark reading environment
+- Automatic scroll position restoration
+
+The reader should prioritize:
+
+Readability • Performance • Comfort
+
+The comic-reading experience should be one of the most polished parts of the application.
+
+---
+
+🔖 USER FEATURES
+
+MaoMao should provide a convenient personal reading experience.
+
+Recommended features include:
+
+- ⭐ Bookmark / Favorite
+- 📖 Reading history
+- ▶️ Continue reading
+- 📊 Reading progress
+- 🔍 Search
+- 🏷️ Genre/category filtering
+- 📚 Chapter navigation
+- 🔄 Previous / Next chapter
+- 🌙 Dark mode
+- ⚙️ Reader settings
+- 🔔 Optional update notifications
+
+Features should be implemented with a focus on quality rather than quantity.
+
+«Quality over quantity.»
+
+An application with fewer features but significantly better UI/UX, performance, stability, and reading experience may outperform an application with many poorly implemented features.
+
+---
+
+💾 LOCAL DATA
+
+User-related data should preferably be stored locally on the device.
+
+Examples:
+
+- Favorite comics
+- Reading history
+- Reading progress
+- Last-read chapter
+- Reader preferences
+- Application settings
+
+The application should not unnecessarily require an account or external server for basic personal reading features.
+
+Local data should survive normal application restarts.
+
+Where appropriate, participants may provide import/export functionality so users can back up their local data.
+
+---
+
+🇮🇩 LANGUAGE REQUIREMENT
+
+The entire application must use Bahasa Indonesia for all user-facing content.
+
+This includes:
+
+- Navigation
+- Buttons
+- Menus
+- Search
+- Filters
+- Settings
+- Comic information
+- Chapter information
+- Reader controls
+- Error messages
+- Loading states
+- Empty states
+- Notifications
+- Labels
+- Descriptions
+
+Technical implementation and source code may use English naming conventions.
+
+The requirement applies specifically to the application's user-facing interface.
+
+---
+
+📄 README.md REQUIREMENT
+
+The project's "README.md" must be written entirely in Chinese (中文).
+
+The README should clearly explain:
+
+- 项目介绍
+- MaoMao 的功能
+- 安装方法
+- 项目运行方法
+- 项目架构
+- 使用的技术
+- 数据来源
+- API / Web Scraping 实现
+- 构建方法
+- GitHub Actions
+- APK/AAB 信息
+- 项目结构
+- 数据存储方式
+- 其他相关说明
+
+The README may mention BacaKomik and "https://bacakomik.my/" where necessary for technical documentation.
+
+Language Rule
+
+📱 Application UI → Bahasa Indonesia 🇮🇩
+
+📄 README.md → Chinese (中文) 🇨🇳
+
+---
+
+🌐 API & WEB SCRAPING
+
+Participants may use:
+
+- APIs
+- Public APIs
+- APIs exposed by the supported website
+- Web scraping
+
+Participants are free to choose the most appropriate technical approach.
+
+The source integration should ideally be isolated from the rest of the application.
+
+For example:
+
+data/
+│
+├── source/
+│   └── bacakomik/
+│       ├── BacaKomikApi
+│       ├── BacaKomikScraper
+│       └── BacaKomikRepository
+│
+└── repository/
+    └── ComicRepository
+
+The exact architecture is up to the participant.
+
+However, source-specific logic should not unnecessarily leak throughout the entire application.
+
+This makes future source integration easier.
+
+---
+
+🚫 WEBSITE ADVERTISEMENTS
+
+Advertisements originating from the supported website must NOT be carried over into MaoMao by any means.
+
+Do not simply display the original website and hide its advertisements.
+
+The application should have its own native interface and retrieve only the content/data necessary for the application.
+
+The goal is to create a clean, native comic-reading experience without importing the website's advertising interface.
+
+---
+
+⚡ PERFORMANCE
+
+MaoMao should be fast and responsive.
+
+Participants should pay attention to:
+
+- Startup time
+- Network efficiency
+- Image loading
+- Image caching
+- Memory usage
+- Smooth scrolling
+- Lazy loading
+- Recycler/LazyColumn efficiency
+- Background work
+- Network error handling
+- Offline/local data
+- Application size
+
+Large comic images should not unnecessarily consume excessive memory.
+
+Image loading and caching should be implemented efficiently.
+
+---
+
+📦 KEEP MAOMAO LIGHTWEIGHT
+
+MaoMao should be as small and lightweight as reasonably possible.
+
+Avoid unnecessary:
+
+- Dependencies
+- Libraries
+- Assets
+- Bundled website resources
+- Code
+- Background processes
+
+Build optimization such as:
+
+- R8
+- Resource shrinking
+- Minification
+- Appropriate dependency management
+
+is encouraged.
+
+Application size will be considered during evaluation.
+
+A small and efficient application is preferred over a bloated implementation.
+
+---
+
+🎬 ANIMATIONS & INTERACTIONS
+
+MaoMao should use subtle and purposeful animations.
+
+Recommended:
+
+- Smooth screen transitions
+- Navigation drawer animation
+- Favorite/bookmark animation
+- Loading transitions
+- Image loading transitions
+- Reader controls appearing/disappearing
+- Chapter navigation transitions
+- Press/ripple feedback
+
+Avoid excessive animations that negatively affect performance or reading comfort.
+
+Animations should feel:
+
+Smooth • Subtle • Fast • Natural
+
+---
+
+🤖 AI IS FULLY ALLOWED
+
+AI assistance is completely allowed and encouraged.
+
+You may use AI for any part of the challenge, including:
+
+- Learning Kotlin
+- Learning Android development
+- Writing Kotlin code
+- Jetpack Compose
+- Material 3
+- UI/UX design
+- API integration
+- Web scraping
+- Comic reader implementation
+- Debugging
+- Testing
+- Performance optimization
+- APK size optimization
+- GitHub Actions
+- Documentation
+- README.md
+
+You can use AI coding assistants, chatbots, code-generation tools, or other AI-powered tools.
+
+You don't need to be a professional developer.
+
+If you can learn, experiment, and use AI to help you build the application, you can participate.
+
+«⚠️ AI assistance does not remove responsibility for the final result.»
+
+Participants are responsible for ensuring that the final application works and follows all challenge requirements.
+
+---
+
+💻 GITHUB & GITHUB ACTIONS
+
+Participants must:
+
+1. Upload the complete MaoMao source code to GitHub.
+2. Keep the repository available for review.
+3. Configure GitHub Actions to build the Android application.
+4. Ensure the workflow successfully builds the project.
+5. Provide the generated APK/AAB through GitHub Actions artifacts or an appropriate release.
+6. Include a complete README.md written in Chinese.
+7. Clearly document the project, architecture, data source, build process, and technologies used.
+
+The repository must allow the review team to inspect:
+
+- Source code
+- Architecture
+- Dependencies
+- API/scraping implementation
+- UI implementation
+- Comic reader
+- Local data storage
+- GitHub Actions workflow
+- Build configuration
+- Documentation
+
+---
+
+🎯 EVALUATION
+
+Submissions will be evaluated based on:
+
+📱 Android Development
+
+- Native Android implementation
+- Kotlin
+- Jetpack Compose
+- Material 3
+- Modern Android architecture
+- Build reliability
+- Code quality
+
+🎨 UI/UX
+
+- Overall visual quality
+- Originality
+- Modern design
+- Mobile optimization
+- Navigation
+- Typography
+- Spacing
+- Accessibility
+- Dark mode
+- Theme consistency
+- Animation quality
+
+📖 Comic Reading
+
+- Reading experience
+- Image loading
+- Image caching
+- Chapter navigation
+- Reading progress
+- Continue reading
+- Bookmark/history
+- Fullscreen reading
+- Performance
+- Reader usability
+
+🌐 Source Integration
+
+- BacaKomik integration
+- Data retrieval reliability
+- API/scraping implementation
+- Error handling
+- Source abstraction
+- Maintainability
+- Future source extensibility
+
+⚡ Performance
+
+- Application size
+- Startup time
+- Responsiveness
+- Memory usage
+- Network efficiency
+- Image handling
+- Scrolling performance
+
+💾 Local Experience
+
+- Reading history
+- Favorites
+- Reading progress
+- Local settings
+- Data persistence
+- Optional import/export
+
+📄 Documentation
+
+- README quality
+- Chinese documentation
+- Build instructions
+- Architecture explanation
+- API/scraping documentation
+- GitHub Actions
+- Project structure
+
+A technically functional application is not necessarily the winner.
+
+We want an application that:
+
+Looks modern.
+Feels native.
+Performs well.
+Is lightweight.
+And is genuinely enjoyable to use.
+
+---
+
+💰 REWARD
+
+$1,000 USD
+
+The best qualifying implementation will receive the reward.
+
+---
+
+📩 SUBMISSION & REVIEW
+
+When your MaoMao implementation is complete:
+
+1️⃣ Upload the project to GitHub
+
+Make sure the repository contains the complete source code.
+
+2️⃣ Run GitHub Actions
+
+Verify that the Android project can be successfully built through GitHub Actions.
+
+3️⃣ Prepare the submission
+
+Make sure the following are ready:
+
+- GitHub repository
+- Source code
+- README.md
+- APK/AAB
+- GitHub Actions workflow
+- Documentation
+
+4️⃣ Submit for review
+
+📧 chal@animexin.dev
+
+Your submission email should include:
+
+- GitHub repository URL
+- APK/AAB or GitHub Actions artifact
+- Brief explanation of your implementation
+- Application size
+- Technologies used
+- Any additional relevant information
+
+The review team will inspect the GitHub repository, source code, build process, and application before determining whether the submission qualifies.
+
+---
+
+🔥 READY TO BUILD MAOMAO?
+
+No developer background?
+
+No problem.
+
+Use AI.
+Learn while building.
+Experiment.
+Create.
+
+One app.
+One source.
+One modern comic-reading experience.
+
+But design the architecture for more.
+
+🚀 Build MaoMao.
+
+💰 Win $1,000.

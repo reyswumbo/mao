@@ -1,0 +1,18 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.MaoMao" parent="androidx.compose.material3.MaterialTheme">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Reader theme - fullscreen -->
+    <style name="Theme.MaoMao.Reader" parent="Theme.MaoMao">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+    <!-- Splash theme -->
+    <style name="Theme.MaoMao.Splash" parent="Theme.MaoMao">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>
