@@ -1,6 +1,6 @@
 package com.maomao
 
-import android.content.Context
+import android.app.Activity
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
@@ -42,7 +42,6 @@ private val DarkColorScheme = darkColorScheme(
     onSurfaceVariant = Color(0xFFCAC4D0),
     outline = Color(0xFF938F99),
     outlineVariant = Color(0xFF49454F),
-    shadow = Color(0xFF000000),
     scrim = Color(0xFF000000),
     inverseSurface = Color(0xFFE6E1E5),
     inverseOnSurface = Color(0xFF313033),
@@ -74,7 +73,6 @@ private val LightColorScheme = lightColorScheme(
     onSurfaceVariant = Color(0xFF49454F),
     outline = Color(0xFF79747E),
     outlineVariant = Color(0xFFCAC4D0),
-    shadow = Color(0xFF000000),
     scrim = Color(0xFF000000),
     inverseSurface = Color(0xFF313033),
     inverseOnSurface = Color(0xFFF4EFF4),
