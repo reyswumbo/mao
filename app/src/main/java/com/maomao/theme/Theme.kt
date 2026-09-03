@@ -2,20 +2,17 @@ package com.maomao
 
 import android.app.Activity
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
-import androidx.core.view.setSystemBarsColor
-import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import com.google.accompanist.systemuicontroller.setStatusBarColor
-import com.google.accompanist.systemuicontroller.setNavigationBarColor
+import com.maomao.util.rememberSystemUiController
 
 private val DarkColorScheme = darkColorScheme(
     primary = Color(0xFFD0BCFF),
@@ -98,14 +95,8 @@ fun MaoMaoTheme(
         val statusBarColor = if (darkTheme) colorScheme.background.toArgb() else colorScheme.surfaceContainerLow.toArgb()
         val navBarColor = colorScheme.background.toArgb()
         
-        systemUiController.setStatusBarColor(
-            color = statusBarColor,
-            darkIcons = !darkTheme
-        )
-        systemUiController.setNavigationBarColor(
-            color = navBarColor,
-            darkIcons = !darkTheme
-        )
+        systemUiController.setStatusBarColor(statusBarColor, !darkTheme)
+        systemUiController.setNavigationBarColor(navBarColor, !darkTheme)
     }
 
     MaterialTheme(
