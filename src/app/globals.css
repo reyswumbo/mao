@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ====== Token identitas ====== */
+:root {
+  --bg: 244 241 232;        /* kertas hangat */
+  --surface: 255 255 247;
+  --raised: 238 232 217;
+  --line: 222 214 196;
+  --ink: 34 29 20;
+  --ink-2: 98 88 74;
+  --ink-3: 150 142 126;
+  --accent: 216 74 42;      /* vermilion */
+  --accent-warm: 240 150 60;
+  --on-accent: 255 252 246;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: 18 16 13;
+  --surface: 25 22 18;
+  --raised: 33 29 21;
+  --line: 47 41 32;
+  --ink: 241 236 225;
+  --ink-2: 171 160 143;
+  --ink-3: 119 109 91;
+  --accent: 255 106 58;
+  --accent-warm: 255 179 92;
+  --on-accent: 26 14 6;
+  color-scheme: dark;
+}
+
+/* Tema pembaca (berdiri sendiri, tidak ikut tema situs). */
+.reader-dark {
+  --reader-bg: 15 15 18;
+  --reader-raised: 26 26 31;
+  --reader-ink: 233 231 224;
+  --reader-ink-2: 160 158 150;
+  color-scheme: dark;
+}
+.reader-gray {
+  --reader-bg: 24 25 27;
+  --reader-raised: 33 34 37;
+  --reader-ink: 226 225 220;
+  --reader-ink-2: 152 152 148;
+  color-scheme: dark;
+}
+.reader-light {
+  --reader-bg: 240 234 222;
+  --reader-raised: 255 251 241;
+  --reader-ink: 34 30 22;
+  --reader-ink-2: 120 111 95;
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-ink;
+    font-feature-settings: "ss01";
+  }
+  ::selection {
+    background: rgb(var(--accent) / 0.25);
+  }
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--ink-3) / 0.4);
+    border-radius: 999px;
+  }
+}
+
+@layer components {
+  .surface-card {
+    @apply rounded-xl2 border border-line bg-surface shadow-card;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border border-line bg-raised px-3 py-1.5 text-xs font-semibold text-ink2 transition-colors;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold text-onaccent shadow-lg shadow-accent/25 transition-transform duration-150 hover:scale-[1.02] active:scale-[0.99] disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-line bg-surface px-5 py-3 text-sm font-bold text-ink transition-colors hover:border-accent/60 hover:text-accent;
+  }
+}
+
+/* Gulir horizontal tanpa scrollbar (mobile-friendly). */
+@layer utilities {
+  .h-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x proximity;
+  }
+  .h-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  .safe-bottom {
+    padding-bottom: max(env(safe-area-inset-bottom), 8px);
+  }
+  /* Teks display serif yang hangat. */
+  .display {
+    @apply font-display tracking-tight;
+  }
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,423 @@
+🚀 99app — Web Comic Reader Challenge
+
+Build a modern, fast, and enjoyable web-based comic reading platform using:
+
+Source Website:
+"https://komiku.org/"
+
+Your goal is to create your own comic-reading experience based on the available content/data from the source website, while designing an original UI/UX. Do not simply reproduce the source website's interface.
+
+---
+
+🎯 Main Goal
+
+Create a website that makes discovering and reading comics feel comfortable, modern, fast, and intuitive.
+
+The challenge is not about adding as many features as possible.
+
+«If a feature does not improve the user's reading or discovery experience, don't add it just for the sake of having more features.»
+
+---
+
+📱 1. Strong Focus on Mobile
+
+Comic reading on smartphones is extremely common.
+
+Therefore:
+
+«Mobile experience will be heavily considered during evaluation.»
+
+Participants should not simply build a desktop website and shrink it down for mobile.
+
+The website should be intentionally designed for:
+
+- 📱 Mobile
+- 📲 Tablet
+- 💻 Laptop
+- 🖥️ Desktop
+
+Pay particular attention to:
+
+- Touch interactions
+- Readability
+- Navigation
+- Button sizes
+- Comic image sizing
+- Scrolling behavior
+- Performance on smaller devices
+- Responsive layouts
+- Mobile reader controls
+
+The mobile experience should feel like a first-class experience, not an afterthought.
+
+---
+
+📖 2. Comic Reader
+
+The core of the project is the reading experience.
+
+The reader should support, where appropriate:
+
+- Vertical comic reading
+- Page-by-page reading
+- Chapter navigation
+- Previous / next chapter
+- Fullscreen reading
+- Reading progress
+- Resume reading position
+- Loading states
+- Error states
+- Responsive comic images
+- Smooth scrolling
+- Reader controls that don't interfere with reading
+
+The interface should remain clean and comfortable during long reading sessions.
+
+---
+
+▶️ 3. Continue Reading
+
+Add a Continue Reading section to make the website feel more like a real reading platform.
+
+For example:
+
+Lanjutkan Membaca
+
+«📕 Solo Leveling
+Chapter 127
+Lanjutkan →»
+
+The user's latest reading position should be stored using browser storage such as "localStorage" or another suitable client-side storage mechanism.
+
+The feature should allow users to:
+
+- Continue a previously opened comic
+- Remember the latest chapter
+- Remember reading progress/position where practical
+- Quickly return to the reader
+
+A login system is not required for this feature.
+
+---
+
+🔎 4. Discovery & Navigation
+
+The website should provide a clear way to discover comics.
+
+Recommended core sections:
+
+- Home
+- Latest Comics
+- Popular Comics
+- Search
+- Genres
+- Catalog
+- Comic Details
+- Chapter List
+
+Navigation should be simple and intuitive.
+
+---
+
+🔍 5. Search
+
+Implement a functional comic search experience.
+
+Consider all important states:
+
+- Searching
+- Results
+- No results
+- Loading
+- Error
+- Empty state
+
+Search should remain usable on mobile devices.
+
+---
+
+📚 6. Comic Details
+
+A comic detail page may contain:
+
+- Cover
+- Title
+- Alternative title
+- Author
+- Artist
+- Genres
+- Status
+- Description
+- Chapter list
+- Latest chapter
+- Reading action
+
+The presentation should be visually organized and easy to scan.
+
+---
+
+⭐ 7. Optional Features
+
+Optional features can be added if they genuinely improve the experience.
+
+Examples:
+
+- Favorites
+- Bookmarks
+- Reading history
+- Continue Reading
+- PWA support
+- Offline-friendly behavior
+- Reading preferences
+- Additional reader customization
+
+Optional features should not come at the cost of core functionality, performance, or usability.
+
+---
+
+⚙️ 8. Reading Settings
+
+A good comic reader may provide settings such as:
+
+- Vertical / Page reading mode
+- Small / Medium / Large page width
+- Dark / Gray / Light background
+- Gap between pages
+- Auto-hide controls
+- Scroll behavior
+
+These settings should remain simple and should not overwhelm the reader.
+
+---
+
+⚡ 9. Performance
+
+Performance is important, especially on mobile.
+
+Consider:
+
+- Lazy loading images
+- Efficient image loading
+- Caching
+- Optimized assets
+- Responsive image handling
+- Smooth scrolling
+- Avoiding unnecessary JavaScript
+- Avoiding excessive animations
+- Fast initial loading
+
+Do not sacrifice reading performance for visual effects.
+
+---
+
+🎨 10. UI/UX
+
+Create an original visual identity.
+
+You may take inspiration from existing comic-reading platforms, but do not simply copy their interface.
+
+Prioritize:
+
+- Clear hierarchy
+- Readability
+- Consistent spacing
+- Good typography
+- Intuitive navigation
+- Comfortable reading
+- Responsive design
+- Professional loading states
+- Professional error states
+
+Animations should be subtle and purposeful.
+
+«No excessive effects.»
+
+Visual effects should support the experience, not distract from the comic.
+
+---
+
+♿ 11. Accessibility
+
+Accessibility is encouraged.
+
+Consider:
+
+- Semantic HTML
+- Keyboard navigation
+- Visible focus states
+- Sufficient color contrast
+- Appropriate touch targets
+- Image alt text
+- Reduced-motion support
+- Accessible controls
+
+---
+
+🛠️ 12. Technology
+
+Technology choice is completely free.
+
+You may use:
+
+- React
+- Next.js
+- Vue
+- Nuxt
+- Svelte
+- SvelteKit
+- Astro
+- Vite
+- TypeScript
+- JavaScript
+- Or another suitable web technology
+
+Rust is not required and should not be used unless specifically chosen by the participant.
+
+Use whatever stack allows you to create the best result.
+
+---
+
+🤖 13. AI-Assisted Development
+
+AI-assisted development is allowed.
+
+You may use tools such as:
+
+- ChatGPT
+- Claude
+- Gemini
+- Cursor
+- GitHub Copilot
+- AI coding agents
+- MCP servers
+- Figma
+- Browser automation
+- AI design tools
+- UI component libraries
+
+You are free to use tools such as:
+
+- shadcn/ui
+- Radix UI
+- Material UI
+- Tailwind CSS
+- Headless UI
+- Mantine
+- Chakra UI
+- Other suitable libraries
+
+The challenge is about the quality of the final product, not whether every line of code was written manually.
+
+---
+
+🧩 14. Source Configuration
+
+The source configuration should be centralized.
+
+Avoid scattering source URLs throughout the codebase.
+
+This makes the project easier to maintain and modify.
+
+---
+
+📖 15. README
+
+Include a "README.md" written in Bahasa Indonesia.
+
+It should explain:
+
+- Project overview
+- Features
+- Technology stack
+- Project structure
+- Installation
+- Local development
+- Production build
+- Source configuration
+- Environment variables
+- Deployment
+- Development instructions
+
+---
+
+🌐 16. Deployment
+
+The project should be production-ready.
+
+Submission should include:
+
+- GitHub repository
+- Live website URL
+
+Vercel is recommended, but other suitable deployment platforms are allowed.
+
+---
+
+🏆 17. Judging Criteria
+
+The project will be evaluated based on:
+
+Category| Weight
+UI/UX & Visual Design| 25%
+Comic Reading Experience| 25%
+Performance| 20%
+Functionality| 15%
+Code Quality & Maintainability| 10%
+Creativity| 5%
+Total| 100%
+
+📱 Important
+
+Mobile experience will be heavily considered during evaluation.
+
+A beautiful desktop interface that feels uncomfortable or poorly adapted on mobile will be negatively affected.
+
+---
+
+📦 18. Submission Requirements
+
+Submit:
+
+1. GitHub repository
+2. Live deployment URL
+3. README in Bahasa Indonesia
+4. All required source code
+5. Working core features
+
+Make sure the submitted website can actually be accessed and tested.
+
+---
+
+⚠️ 19. Important Notes
+
+- Use only the designated source website: "https://komiku.org/"
+- Create an original UI/UX.
+- Do not simply clone the source website's interface.
+- Do not intentionally reproduce advertisements from the source website.
+- Prioritize the reading experience.
+- Prioritize mobile usability.
+- Keep the website lightweight.
+- Avoid unnecessary visual effects.
+- Optional features should not compromise the core experience.
+- AI-assisted development is allowed.
+- Technology choice is free.
+
+---
+
+💰 Reward
+
+$0 USD
+
+The challenge is currently focused on building, experimenting, learning, and creating a strong web comic-reading experience.
+
+---
+
+🔥 Final Principle
+
+Don't try to build the website with the most features.
+
+Build the website that makes someone think:
+
+«"I actually want to read comics here."»
+
+One Source. One Reader. Your Design.
