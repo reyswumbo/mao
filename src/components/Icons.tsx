@@ -115,6 +115,12 @@ export const ArrowLeftIcon = (p: P) => (
   </svg>
 );
 
+export const PlayIcon = (p: P) => (
+  <svg {...base(p, 20)} fill="currentColor">
+    <path d="M8 5.5v13l11-6.5-11-6.5Z" />
+  </svg>
+);
+
 export const CheckIcon = (p: P) => (
   <svg {...base(p, 20)}>
     <path d="M20 6 9 17l-5-5" />

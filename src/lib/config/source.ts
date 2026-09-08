@@ -5,14 +5,34 @@
  * Seluruh URL & konstanta scraping berasal dari file ini saja.
  */
 export const SOURCE = {
-  /** Situs sumber tunggal. */
+  /** Situs sumber tunggal (komik). */
   baseUrl: "https://komiku.org",
+  /** Sumber video (anime/donghua). */
+  videoBaseUrl: "https://animexin.dev",
   /** CDN thumbnail (poster). */
   thumbnailHost: "thumbnail.komiku.to",
   /** User-Agent agar direspons dengan versi desktop normal. */
   userAgent:
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
 } as const;
+
+/** Nama modul — dipakai untuk berpindah mode di hamburger. */
+export const MODULES = [
+  {
+    id: "baca",
+    label: "Baca Komik",
+    href: "/",
+    baseUrl: SOURCE.baseUrl,
+    mode: "📖" as const,
+  },
+  {
+    id: "nonton",
+    label: "Nonton Video",
+    href: "/nonton",
+    baseUrl: SOURCE.videoBaseUrl,
+    mode: "▶" as const,
+  },
+] as const;
 
 /** Tipe komik yang dikenal sumber. */
 export const COMIC_TYPES = ["manga", "manhwa", "manhua"] as const;

@@ -91,3 +91,75 @@ export interface ContinueEntry {
 export interface SearchResult {
   items: ComicCard[];
 }
+
+/* ==================================================================== */
+/* Modul video (animexin.dev)                                            */
+/* ==================================================================== */
+
+export interface VideoCard {
+  id: string;
+  slug: string;
+  title: string;
+  poster: string;
+  /** Label episode, mis. “Ep 157” (ada pada kartu rilis terbaru). */
+  epLabel?: string;
+  type?: string;
+  status?: string;
+  /** Url halaman kartu (bab atau seri sesuai sumber). */
+  target: string;
+  isEpisode: boolean;
+}
+
+export interface VideoEpisode {
+  id: string;
+  num: string;
+  title?: string;
+  date?: string;
+}
+
+export interface VideoSeries {
+  slug: string;
+  title: string;
+  altTitle?: string;
+  poster: string;
+  cover?: string;
+  status?: string;
+  type?: string;
+  genres: string[];
+  studio?: string;
+  network?: string;
+  rating?: string;
+  /** Boilerplate deskripsi dari situs sumber. */
+  description?: string;
+  episodeCount: number;
+  /** Daftar episode termuat di halaman (bisa terbatas karena pagination sumber). */
+  episodeList: VideoEpisode[];
+  firstEpId?: string;
+  lastEpId?: string;
+}
+
+/** Server pemutar kedua sumber (embed iframe, bisa mengandung iklan). */
+export interface VideoServer {
+  index: number;
+  label: string;
+  /** URL embed (iframe) — iklan mengikuti server tujuan. */
+  embedUrl: string;
+}
+
+export interface VideoEpisodeData {
+  id: string;
+  seriesSlug: string;
+  seriesTitle: string;
+  epNumber: string;
+  title: string;
+  servers: VideoServer[];
+  /** url iframe bawaan halaman (server terpilih default). */
+  defaultEmbed: string;
+  prevId?: string;
+  nextId?: string;
+}
+
+export interface VideoHomeData {
+  popular: VideoCard[];
+  latest: VideoCard[];
+}

@@ -5,36 +5,34 @@ import { usePathname } from "next/navigation";
 import { GridIcon, HomeIcon, SearchIcon } from "./Icons";
 import { useApp } from "./Providers";
 
-/** Bilah navigasi bawah — khusus mobile-first. */
+const COMIC_NAV = [
+  { href: "/", label: "Beranda", Icon: HomeIcon, match: (p: string) => p === "/" },
+  { href: "/cari", label: "Cari", Icon: SearchIcon, match: (p: string) => p.startsWith("/cari") },
+  { href: "/katalog", label: "Katalog", Icon: GridIcon, match: (p: string) => p.startsWith("/katalog") },
+];
+
+const VIDEO_NAV = [
+  { href: "/nonton", label: "Beranda", Icon: HomeIcon, match: (p: string) => p === "/nonton" },
+  { href: "/nonton/cari", label: "Cari", Icon: SearchIcon, match: (p: string) => p.startsWith("/nonton/cari") },
+];
+
+/** Bilah navigasi bawah — mengikuti mode aktif (baca/nonton). */
 export default function BottomNav() {
   const { settings } = useApp();
-  const path = usePathname();
   void settings;
+  const path = usePathname();
 
-  if (path.startsWith("/baca")) return null;
+  if (path.startsWith("/baca") || path.startsWith("/nonton/t")) return null;
 
-  const items = [
-    { href: "/", label: "Beranda", Icon: HomeIcon, match: (p: string) => p === "/" },
-    {
-      href: "/cari",
-      label: "Cari",
-      Icon: SearchIcon,
-      match: (p: string) => p.startsWith("/cari"),
-    },
-    {
-      href: "/katalog",
-      label: "Katalog",
-      Icon: GridIcon,
-      match: (p: string) => p.startsWith("/katalog"),
-    },
-  ];
+  const items = path.startsWith("/nonton") ? VIDEO_NAV : COMIC_NAV;
+
   return (
     <nav
       aria-label="Navigasi utama"
       className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-surface/90 backdrop-blur-lg md:hidden"
     >
       <ul
-        className="safe-bottom mx-auto flex max-w-md items-stretch"
+        className="mx-auto flex max-w-md items-stretch"
         style={{ paddingBottom: "max(env(safe-area-inset-bottom), 6px)" }}
       >
         {items.map(({ href, label, Icon, match }) => {
